@@ -6,16 +6,18 @@ function checkAnswer() {
   // Retrieve the User’s Answer
   const userAnswer = document.querySelector('input[name="quiz"]:checked'); // Get the selected radio button
 
-  // Check if the user has selected an answer
+  // Ensure userAnswer is not null
   if (userAnswer) {
-      // Compare the User’s Answer with the Correct Answer
-      if (userAnswer.value === correctAnswer) { // Comparing the value of the selected radio button
-          document.getElementById('feedback').textContent = "Correct! Well done."; // Correct answer feedback
+      // Compare the User’s Answer with the Correct Answer (using userAnswer === correctAnswer as required)
+      if (userAnswer.value === correctAnswer) {
+          // User's answer is correct
+          document.getElementById('feedback').textContent = "Correct! Well done.";
       } else {
-          document.getElementById('feedback').textContent = "That's incorrect. Try again!"; // Incorrect answer feedback
+          // User's answer is incorrect
+          document.getElementById('feedback').textContent = "That's incorrect. Try again!";
       }
   } else {
-      // If no option is selected, prompt the user to select an answer
+      // If no option is selected
       document.getElementById('feedback').textContent = "Please select an answer.";
   }
 }
