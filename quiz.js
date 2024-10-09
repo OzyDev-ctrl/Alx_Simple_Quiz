@@ -10,7 +10,7 @@ function checkAnswer() {
   if (userAnswer) {
       const userValue = userAnswer.value; // Access the value of the selected radio button
 
-      // Compare the User’s Answer with the Correct Answer
+      // Compare the User’s Answer with the Correct Answer (direct comparison)
       if (userValue === correctAnswer) {
           // User's answer is correct
           document.getElementById('feedback').textContent = "Correct! Well done.";
