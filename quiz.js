@@ -9,15 +9,13 @@ function checkAnswer() {
   // Check if the user has selected an answer
   if (userAnswer) {
       // Compare the User’s Answer with the Correct Answer
-      if (userAnswer.value === correctAnswer) {  // This line now includes userAnswer directly
-          // User's answer is correct
-          document.getElementById('feedback').textContent = "Correct! Well done.";
+      if (userAnswer.value === correctAnswer) { // Comparing the value of the selected radio button
+          document.getElementById('feedback').textContent = "Correct! Well done."; // Correct answer feedback
       } else {
-          // User's answer is incorrect
-          document.getElementById('feedback').textContent = "That's incorrect. Try again!";
+          document.getElementById('feedback').textContent = "That's incorrect. Try again!"; // Incorrect answer feedback
       }
   } else {
-      // If no option is selected
+      // If no option is selected, prompt the user to select an answer
       document.getElementById('feedback').textContent = "Please select an answer.";
   }
 }
