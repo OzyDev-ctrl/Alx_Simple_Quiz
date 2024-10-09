@@ -8,10 +8,8 @@ function checkAnswer() {
 
   // Check if the user has selected an answer
   if (userAnswer) {
-      const userValue = userAnswer.value; // Access the value of the selected radio button
-
-      // Compare the User’s Answer with the Correct Answer (direct comparison)
-      if (userValue === correctAnswer) {
+      // Compare the User’s Answer with the Correct Answer
+      if (userAnswer.value === correctAnswer) {  // This line now includes userAnswer directly
           // User's answer is correct
           document.getElementById('feedback').textContent = "Correct! Well done.";
       } else {
